@@ -43,13 +43,14 @@
         <div class="d-flex flex-column gap-2">
             
             {% for answer in answers %}
-                {% include 'layouts/answer.html' %}
-            {% endfor %}
+                {%include 'layouts/answer.html'%}
+            {%endfor%}
 
         </div>
         <hr>
 
-        <nav aria-label="Page navigation example" class="mt-3">
+
+        <nav aria-label="Page navigation example" class="mt-3 mb-2">
             {% include 'layouts/pagination.html' %}
         </nav>
 
