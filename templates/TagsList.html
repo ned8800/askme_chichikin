@@ -1,0 +1,23 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+
+{% block title %}
+    <title>Tag's list</title>
+{% endblock %}
+
+{% block content_name %}
+    <div class="content-name">Tag: {{ tag_name }}</div>
+{% endblock %}
+
+{% block content %}
+        <div class="d-flex flex-column gap-2">
+            
+            {% for question in taggedQuestions %}
+                {% include 'layouts/question.html' %}
+            {% endfor %}
+
+       
+        </div>
+        <hr>
+
+{% endblock %}

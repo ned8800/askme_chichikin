@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: none;
+}
+
+.base-navbar {
+    background-color: rgb(34, 174, 221);
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+}
+
+.ask-button {
+    background-color: aliceblue;
+}
+
+.container-content-name {
+    margin-bottom: 2rem;
+}
+
+.content-name {
+    margin-top: 0;
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    
+    font-size:calc(1.375rem + 1.5vw)};
+    
+    @media (min-width:1200px){
+        h1{font-size:2.5rem
+    };
+}
+
+.question-single-content {
+    height: 20vw;
+    
+}

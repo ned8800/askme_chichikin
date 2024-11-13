@@ -1,0 +1,26 @@
+{% load static %}
+
+<div class="row border pt-2 pb-2 rounded">
+    <div class="col-3 d-flex flex-column">
+        <div class="border mb-2 h-100">
+            <img src="{% static '/pictures/cat.jpeg' %}" alt="Avatar" class="img-fluid">
+        </div>
+        <input type="number" class="form-control w-100" value="5"
+               placeholder="Default input" aria-label="default-input-example">
+    </div>
+    <div class="col d-flex flex-column gap-2">
+        <a href="{% url 'QuestionSingle' question.id %}">
+            <h5>{{ question.title }}</h5>
+        </a>
+        <p class="card-text">{{ question.text }}
+        </p>
+        <div class="d-flex gap-3">
+            <div> answer ({{ question.comments_count }}) </div>
+            <div>
+                Tags:
+                <a href="{% url 'TagsList' 'blablabla' %}" class="card-link">blablabla</a>
+                <a href="{% url 'TagsList' 'first' %}" class="card-link">first</a>
+            </div>
+        </div>
+    </div>
+</div>

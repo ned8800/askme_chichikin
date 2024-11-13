@@ -1,0 +1,22 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+
+{% block title %}
+    <title> Hot questions </title>
+{% endblock%}
+
+
+{% block content_name %}
+    <div class="content-name"> Hot questions </div>
+    <a href=" {% url 'QuestionsList' %} ">New Questions</a>
+{% endblock %}
+
+{% block content %}
+    <div class="d-flex flex-column gap-3"> 
+        {% for question in questions %}
+            {% include 'layouts/question.html' %}
+        {% endfor %}
+    </div>
+
+
+{% endblock %}

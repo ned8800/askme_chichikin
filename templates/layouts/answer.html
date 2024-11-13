@@ -1,0 +1,34 @@
+{% load static %}
+
+<div class="row border pt-2 pb-2 rounded">
+    <div class="col-3 d-flex flex-column">
+        <div class="border mb-2 h-100">
+            <img src="{% static '/pictures/cat.jpeg' %}" alt="Avatar" class="img-fluid">
+        </div>
+        <input type="number" class="form-control w-100" value="5"
+               placeholder="Default input" aria-label="default-input-example">
+    </div>
+
+    <div class="col-9 d-flex flex-column gap-3">
+        <div style="flex-grow: 1;">
+            <p class="card-text">{{ answer.text }}
+            
+        </div>
+
+        <div class="d-flex gap-3">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault {{ answer.is_correct }}">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Ответ Верен
+                </label>
+              </div>
+              
+              
+            <div>
+                Tags:
+                <a href="{% url 'TagsList' 'blablabla' %}" class="card-link">blablabla</a>
+                <a href="{% url 'TagsList' 'first' %}" class="card-link">first</a>
+            </div>
+        </div>
+    </div>
+</div>

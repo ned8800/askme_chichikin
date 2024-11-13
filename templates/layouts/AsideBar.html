@@ -1,0 +1,25 @@
+{% load static %}
+
+<section class="mb-3">
+    <h2>Popular Tags</h2>
+    <div>
+        <span class="badge bg-primary">Primary</span>
+        <span class="badge bg-secondary">Secondary</span>
+        <span class="badge bg-success">Success</span>
+        <span class="badge bg-danger">Danger</span>
+        <span class="badge bg-warning text-dark">Warning</span>
+        <span class="badge bg-info text-dark">Info</span>
+        <span class="badge bg-light text-dark">Light</span>
+        <span class="badge bg-dark">Dark</span>
+    </div>
+</section>
+<section>
+    <h2>Best Members</h2>
+    <div>
+        <ul class="list-group list-group-flush">
+            {% for member in members %}
+            <li class="list-group-item"><a href="#">{{ member.memberName }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+</section>
