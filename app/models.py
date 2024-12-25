@@ -1,4 +1,3 @@
-
 from datetime import timezone
 from django.db import models
 from django.contrib.auth.models import User
@@ -33,9 +32,10 @@ class AnswerManager(models.Manager):
         return self.annotate(Count('likeanswer')).order_by('-is_correct', '-likeanswer__count', '-date')
     
 
+# user's pass: 1Q2w3e4r5t_
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, null=False)
-    avatar = models.ImageField(blank=True, null=True, default='pictures/cat.png', upload_to="avatars/%Y/%m/%d")
+    avatar = models.ImageField(blank=True, null=True, default='avatars/common_avatar.png', upload_to="avatars/%Y/%m/%d")
 
     objects = ProfileManager()
     
