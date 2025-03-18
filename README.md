@@ -1,2 +1,3 @@
-# web_technopark
-lab 1-7 Timofey done
+# Askme app
+
+This is clone of reddit website written with python django and bootstrap
